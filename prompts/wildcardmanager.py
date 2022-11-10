@@ -15,7 +15,7 @@ class WildcardManager:
         try:
             self._path.mkdir(parents=True, exist_ok=True)
         except Exception as e:
-            logger.exception(f"Failed to create directory {self._path}")
+            print (f"Failed to create directory {self._path}")
 
     def get_files(self, relative:bool=False) -> list[Path]:
         if not self._directory_exists():
